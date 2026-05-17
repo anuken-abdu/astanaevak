@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Эвакуатор №1 в Астане — 24/7 | astanaevak.kz</title>
+  <meta name="description" content="Эвакуатор в Астане 24/7. Быстрый выезд по всем районам столицы и пригородам. Звоните: +7 777 037 7736. WhatsApp.">
+  <meta name="keywords" content="эвакуатор Астана, эвакуатор 24/7 Астана, вызвать эвакуатор Астана, эвакуатор недорого Астана, эвакуатор Есиль, эвакуатор Алматы район, эвакуатор Сарыарка, эвакуатор Косшы">
+  <link rel="canonical" href="https://astanaevak.kz/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Эвакуатор №1 в Астане — 24/7">
+  <meta property="og:description" content="Эвакуатор в Астане 24/7. Быстрый выезд по всем районам столицы и пригородам.">
+  <meta property="og:url" content="https://astanaevak.kz/">
+  <meta property="og:locale" content="ru_RU">
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Эвакуатор №1 в Астане",
+    "url": "https://astanaevak.kz/",
+    "telephone": "+77770377736",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Астана",
+      "addressCountry": "KZ"
+    },
+    "areaServed": "Астана",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      /* Day theme (default) */
+      --sos-red:#EF4444;
+      --trust-blue:#1E293B;
+      --soft-bg:#F8FAFC;
+      --card-bg:#ffffff;
+      --muted:#64748b;
+      --border:#e2e8f0;
+      --nav-bg: rgba(255,255,255,.85);
+      --hero-glow-1: rgba(254, 226, 226, .6);
+      --hero-glow-2: rgba(219, 234, 254, .6);
+
+      /* scrolling slider vars */
+      --total-items: 8;
+      --animation-duration: 28s;
+    }
+
+    /* Night theme */
+    html[data-theme="night"]{
+      --sos-red:#F87171;
+      --trust-blue:#e2e8f0;
+      --soft-bg:#0b1220;
+      --card-bg:#111a2e;
+      --muted:#94a3b8;
+      --border:#1f2a44;
+      --nav-bg: rgba(11,18,32,.85);
+      --hero-glow-1: rgba(127, 29, 29, .25);
+      --hero-glow-2: rgba(30, 58, 138, .25);
+    }
+
+    html, body { max-width: 100%; overflow-x: clip; }
+    body{
+      font-family:'Outfit',sans-serif;
+      background-color:var(--soft-bg);
+      color:var(--trust-blue);
+      transition: background-color .3s ease, color .3s ease;
+    }
+
+    /* Night theme — Tailwind cards/regions overrides */
+    html[data-theme="night"] .bg-white{ background-color:var(--card-bg) !important; }
+    html[data-theme="night"] .bg-slate-50{ background-color:#0f1a30 !important; }
+    html[data-theme="night"] .bg-slate-100{ background-color:#142139 !important; }
+    html[data-theme="night"] .border-slate-100,
+    html[data-theme="night"] .border-slate-200{ border-color:var(--border) !important; }
+    html[data-theme="night"] .text-slate-900{ color:#f1f5f9 !important; }
+    html[data-theme="night"] .text-slate-700{ color:#cbd5e1 !important; }
+    html[data-theme="night"] .text-slate-500{ color:#94a3b8 !important; }
+    html[data-theme="night"] .text-slate-400{ color:#7d8aa3 !important; }
+    html[data-theme="night"] .text-slate-600{ color:#a8b3c7 !important; }
+    html[data-theme="night"] .text-gray-400{ color:#7d8aa3 !important; }
+    html[data-theme="night"] .text-gray-500{ color:#94a3b8 !important; }
+    html[data-theme="night"] .bg-red-50{ background-color:#3a1a22 !important; }
+    html[data-theme="night"] .bg-red-100{ background-color:#3a1a22 !important; }
+    html[data-theme="night"] .text-red-600{ color:#f87171 !important; }
+    html[data-theme="night"] .bg-green-50{ background-color:#0e2a1c !important; }
+    html[data-theme="night"] .text-green-600{ color:#34d399 !important; }
+    html[data-theme="night"] .border-green-500{ border-color:#22c55e !important; }
+    html[data-theme="night"] .bg-white\/80{ background-color: rgba(11,18,32,.8) !important; }
+    html[data-theme="night"] .bg-white\/95{ background-color: rgba(11,18,32,.92) !important; }
+
+    /* Radar SOS effect */
+    .radar-pulse{ position:relative; }
+    .radar-pulse::before,
+    .radar-pulse::after{
+      content:'';
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      border-radius:50%;
+      border:2px solid var(--sos-red);
+      opacity:0;
+      animation:radar 2s infinite;
+      z-index:-1;
+    }
+    .radar-pulse::after{ animation-delay:.5s; }
+    @keyframes radar{
+      0%{ width:100%; height:100%; opacity:.8; }
+      100%{ width:250%; height:250%; opacity:0; }
+    }
+
+    /* Gradient text */
+    .text-gradient{
+      background:linear-gradient(135deg,#EF4444 0%,#B91C1C 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* Buttons */
+    .btn-sos{
+      background:linear-gradient(135deg,#EF4444 0%,#DC2626 100%);
+      box-shadow:0 10px 25px -5px rgba(239,68,68,.4);
+      transition:transform .2s;
+    }
+    .btn-sos:active{ transform:scale(.97); }
+
+    /* Mobile menu */
+    .menu-collapsed{
+      max-height:0;
+      overflow:hidden;
+      opacity:0;
+      transform: translateY(-8px);
+      pointer-events:none;
+    }
+    .menu-expanded{
+      max-height:78vh;
+      overflow:auto;
+      opacity:1;
+      transform: translateY(0);
+      pointer-events:auto;
+    }
+    #mobileMenu{
+      transition: max-height .22s ease, opacity .22s ease, transform .22s ease;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Burger sections heading */
+    .menu-section-title{
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--muted);
+      padding:14px 8px 6px;
+    }
+
+    /* Social / action buttons in nav */
+    .social-wrap{ display:flex; align-items:center; gap:10px; }
+
+    .SocialBtn{
+      border:none;
+      border-radius:999px;
+      width:42px;
+      height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      position:relative;
+      overflow:hidden;
+      transition: all .25s ease;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, .10);
+      user-select:none;
+      text-decoration:none;
+    }
+    .SocialBtn:active{ transform: scale(.96); }
+    .SocialBtn .label{
+      position:absolute;
+      right:14px;
+      color:#fff;
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.2px;
+      opacity:0;
+      transform: translateX(10px);
+      transition: all .25s ease;
+      white-space:nowrap;
+      pointer-events:none;
+    }
+    .SocialBtn .icon{
+      color:#fff;
+      font-size:18px;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    @media (min-width: 640px){
+      .SocialBtn:hover{ width:118px; }
+      .SocialBtn:hover .label{ opacity:1; transform: translateX(0); }
+      .SocialBtn:hover .icon{ opacity:0; transform: scale(.9); }
+    }
+    .SocialBtn.whatsapp{ background:#22c55e; }
+    .SocialBtn.call{ background: linear-gradient(135deg,#0f172a 0%, #334155 100%); }
+    .SocialBtn.theme{ background: linear-gradient(135deg,#475569 0%, #1e293b 100%); }
+
+    /* Scrolling slider */
+    .scorlling{
+      width:100%;
+      max-width:1536px;
+      position:relative;
+      height:150px;
+      overflow:hidden;
+      mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+      -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+    }
+    .scorlling img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+    }
+    @keyframes scrollleft{
+      to { left: -250px; }
+    }
+    .item{
+      width:250px;
+      height:100%;
+      background-color:#bababa;
+      border-radius:18px;
+      position:absolute;
+      overflow:hidden;
+      left: max(calc(250px * var(--total-items)), 100%);
+      animation-name: scrollleft;
+      animation-duration: var(--animation-duration);
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+      border: 4px solid rgba(255,255,255,.8);
+    }
+    .item1 { animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 1) * -1); }
+    .item2 { animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 2) * -1); }
+    .item3 { animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 3) * -1); }
+    .item4 { animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 4) * -1); }
+    .item5 { animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 5) * -1); }
+    .item6 { animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 6) * -1); }
+    .item7 { animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 7) * -1); }
+    .item8 { animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 8) * -1); }
+
+    .regions-hidden { display:none; }
+
+    /* Brand text */
+    .brand-name{
+      font-weight:900;
+      letter-spacing:-.02em;
+      line-height:1;
+    }
+    .brand-name .accent{ color:#EF4444; }
+    .brand-sub{
+      font-size:10px;
+      color:var(--muted);
+      font-weight:800;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin-top:3px;
+    }
+  </style>
+</head>
+
+<body class="pb-24 md:pb-0">
+
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 backdrop-blur-md border-b" style="background:var(--nav-bg); border-color:var(--border);">
+    <div class="relative">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="#top" class="select-none">
+          <div class="brand-name text-lg md:text-xl">Эвакуатор <span class="accent">№1</span> в Астане</div>
+          <div class="brand-sub">24/7 · astanaevak.kz</div>
+        </a>
+
+        <div class="flex items-center gap-3">
+          <!-- Social buttons -->
+          <div class="social-wrap">
+            <a class="SocialBtn whatsapp"
+               href="https://wa.me/77770377736"
+               target="_blank" rel="noopener"
+               aria-label="WhatsApp Эвакуатор Астана">
+              <i class="fa-brands fa-whatsapp icon"></i>
+              <span class="label">WhatsApp</span>
+            </a>
+
+            <a class="SocialBtn call"
+               href="tel:+77770377736"
+               aria-label="Позвонить">
+              <i class="fa-solid fa-phone icon"></i>
+              <span class="label">Звонок</span>
+            </a>
+
+            <button class="SocialBtn theme" id="themeBtn" aria-label="Переключить тему">
+              <i id="themeIcon" class="fa-solid fa-moon icon"></i>
+              <span class="label" id="themeLabel">Ночь</span>
+            </button>
+          </div>
+
+          <a href="tel:+77770377736"
+             class="hidden md:flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-full hover:bg-slate-800 transition shadow-lg">
+            <i class="fas fa-phone-alt text-sm"></i>
+            <span class="font-bold">+7 777 037 7736</span>
+          </a>
+
+          <button id="burgerBtn"
+                  class="md:hidden w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-slate-700 active:scale-95 transition"
+                  aria-label="Открыть меню"
+                  aria-expanded="false"
+                  aria-controls="mobileMenu">
+            <i id="burgerIcon" class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu"
+           class="md:hidden absolute left-0 right-0 top-full bg-white/95 backdrop-blur-md border-t border-slate-100 menu-collapsed">
+        <div class="container mx-auto px-4 py-4">
+          <div class="grid grid-cols-2 gap-2 mb-3">
+            <a href="tel:+77770377736" class="btn-sos text-white px-4 py-3 rounded-2xl font-black flex items-center justify-center gap-2">
+              <i class="fas fa-phone-alt"></i> Звонок
+            </a>
+            <a href="https://wa.me/77770377736" class="bg-white text-green-600 border-2 border-green-500 px-4 py-3 rounded-2xl font-black flex items-center justify-center gap-2 hover:bg-green-50 transition">
+              <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+            </a>
+          </div>
+
+          <div class="max-h-[60vh] overflow-auto pr-1">
+            <!-- Районы Астаны -->
+            <div class="menu-section-title">Районы Астаны</div>
+            <div class="grid grid-cols-1 gap-2">
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Есиль</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Алматы район</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Сарыарка</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Байконыр</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Нура</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Сарайшык</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+            </div>
+
+            <!-- Микрорайоны и ЖК -->
+            <div class="menu-section-title">Микрорайоны и ЖК</div>
+            <div class="grid grid-cols-1 gap-2">
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Левый берег</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Правый берег</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Юго-Восток</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Highvill</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Northern Lights</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Изумрудный квартал</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Триумф Астаны</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Grand Alatau</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Nova City</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Expo</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Керемет</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Караоткель</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Коктал</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Молодёжный</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Чубары</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Мичурино</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Куйгенжар</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Промзона</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Интернациональный</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Тельмана</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Юбилейный</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Шубар</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Ильинка</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Тассуат</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Уркер</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Лесозавод</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+            </div>
+
+            <!-- Пригороды и трассы -->
+            <div class="menu-section-title">Пригороды и трассы</div>
+            <div class="grid grid-cols-1 gap-2">
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Косшы</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Талапкер</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Караоткель</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Кояндинский</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Софиевка</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Аршалы</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Жибек Жолы</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Целиноград</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Шортанды</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Кокшетау (трасса)</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Караганды (трасса)</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+              <a href="https://wa.me/77770377736" class="px-4 py-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition font-black text-slate-900 flex items-center justify-between"><span>Эвакуатор Боровое (трасса)</span><span class="text-slate-400 font-bold text-sm">24/7</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="top" class="pt-28 pb-12 md:pt-40 md:pb-20 overflow-hidden relative">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl -z-10 opacity-70 translate-x-1/2 -translate-y-1/2" style="background:var(--hero-glow-1);"></div>
+    <div class="absolute bottom-0 left-0 w-[320px] h-[320px] rounded-full blur-3xl -z-10 opacity-70 -translate-x-1/2 translate-y-1/2" style="background:var(--hero-glow-2);"></div>
+
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+
+        <div class="w-full lg:w-1/2 text-center lg:text-left z-10" data-aos="fade-up">
+          <div class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-1.5 rounded-full shadow-sm mb-6">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-ping"></span>
+            <span class="text-xs font-bold text-slate-600 uppercase tracking-wide">Водитель готов к выезду</span>
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-black mb-6 leading-[1.1] text-slate-900">
+            Сломалась <br>
+            <span class="text-gradient">Машина?</span>
+          </h1>
+
+          <p class="text-lg text-slate-500 mb-8 max-w-lg mx-auto lg:mx-0 font-medium">
+            Эвакуатор №1 в&nbsp;Астане 24/7. Быстро приедем, аккуратно погрузим и&nbsp;доставим — по&nbsp;городу, пригородам и&nbsp;трассам.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="tel:+77770377736" class="btn-sos text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 radar-pulse">
+              <i class="fas fa-phone-alt"></i> Вызвать срочно
+            </a>
+            <a href="https://wa.me/77770377736" class="bg-white text-green-600 border-2 border-green-500 px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:bg-green-50 transition">
+              <i class="fab fa-whatsapp text-2xl"></i> Отправить локацию
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-1/2 relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+          <div class="w-full h-[400px] md:h-[500px] relative z-10 rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+            <img id="heroImage"
+                 src="images/img1.jpg"
+                 class="w-full h-full object-cover transition-opacity duration-700"
+                 alt="Эвакуатор Астана работа">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+          </div>
+
+          <div class="absolute top-10 left-2 sm:-left-5 bg-white p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
+            <div class="flex items-center gap-3">
+              <div class="bg-green-100 p-2 rounded-lg text-green-600"><i class="fas fa-tag"></i></div>
+              <div>
+                <p class="text-[10px] text-gray-400 font-bold uppercase">Цена от</p>
+                <p class="font-bold text-slate-900">9 999 ₸</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute bottom-10 right-2 sm:-right-5 bg-white p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 4s;">
+            <div class="flex items-center gap-3">
+              <div class="text-yellow-400 text-xl"><i class="fas fa-star"></i></div>
+              <div>
+                <p class="font-bold text-slate-900">24/7</p>
+                <p class="text-[10px] text-gray-400 font-bold uppercase">Сервис</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-20 bg-white rounded-t-[50px] shadow-[0_-20px_40px_rgba(0,0,0,0.03)] z-20 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-black text-center mb-12 text-slate-900">
+        Чем мы <span class="text-red-500">поможем?</span>
+      </h2>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+        <a href="tel:+77770377736" class="group bg-slate-50 p-6 rounded-3xl hover:bg-red-500 hover:text-white transition-all duration-300 cursor-pointer" data-aos="fade-up">
+          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-2xl text-red-500 mb-4 shadow-sm group-hover:scale-110 transition">
+            <i class="fas fa-car-crash"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">ДТП / Авария</h3>
+          <p class="text-sm text-slate-400 group-hover:text-red-100">Аккуратная погрузка битых авто</p>
+        </a>
+
+        <a href="https://wa.me/77770377736" class="group bg-slate-50 p-6 rounded-3xl hover:bg-red-500 hover:text-white transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-2xl text-red-500 mb-4 shadow-sm group-hover:scale-110 transition">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Заблокировано</h3>
+          <p class="text-sm text-slate-400 group-hover:text-red-100">Колёса, руль или коробка передач</p>
+        </a>
+
+        <a href="tel:+77770377736" class="group bg-slate-50 p-6 rounded-3xl hover:bg-red-500 hover:text-white transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-2xl text-red-500 mb-4 shadow-sm group-hover:scale-110 transition">
+            <i class="fas fa-snowflake"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Кювет / Снег</h3>
+          <p class="text-sm text-slate-400 group-hover:text-red-100">Вытащим лебёдкой из&nbsp;любого сугроба</p>
+        </a>
+
+        <a href="https://wa.me/77770377736" class="group bg-slate-50 p-6 rounded-3xl hover:bg-red-500 hover:text-white transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-2xl text-red-500 mb-4 shadow-sm group-hover:scale-110 transition">
+            <i class="fas fa-truck-pickup"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Перевозка</h3>
+          <p class="text-sm text-slate-400 group-hover:text-red-100">Доставим на&nbsp;СТО или&nbsp;стоянку</p>
+        </a>
+      </div>
+
+      <!-- SCROLLING PHOTOS -->
+      <div class="mt-14" data-aos="fade-up">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-black text-slate-900">Фото <span class="text-red-500">работ</span></h3>
+        </div>
+
+        <div class="mx-auto scorlling rounded-[28px] bg-white border border-slate-100">
+          <div class="item item1"><img src="images/img1.jpg" alt="Фото 1" loading="lazy" decoding="async"></div>
+          <div class="item item2"><img src="images/img2.jpg" alt="Фото 2" loading="lazy" decoding="async"></div>
+          <div class="item item3"><img src="images/img3.jpg" alt="Фото 3" loading="lazy" decoding="async"></div>
+          <div class="item item4"><img src="images/img4.jpg" alt="Фото 4" loading="lazy" decoding="async"></div>
+          <div class="item item5"><img src="images/img5.jpg" alt="Фото 5" loading="lazy" decoding="async"></div>
+          <div class="item item6"><img src="images/img6.jpg" alt="Фото 6" loading="lazy" decoding="async"></div>
+          <div class="item item7"><img src="images/img7.jpg" alt="Фото 7" loading="lazy" decoding="async"></div>
+          <div class="item item8"><img src="images/img8.jpg" alt="Фото 8" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGIONS -->
+  <section id="regions" class="py-20 bg-slate-50 overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-black">Районы Астаны и <span class="text-red-500">пригороды</span></h2>
+          <p class="text-slate-500 mt-3 font-medium">Работаем 24/7 по&nbsp;городу и&nbsp;трассам.</p>
+
+          <div class="mt-5 flex items-center justify-center">
+            <button id="toggleRegionsBtn"
+                    class="bg-white border border-slate-200 px-6 py-3 rounded-2xl font-black text-slate-900 shadow-sm hover:shadow-md transition active:scale-95 inline-flex items-center gap-2">
+              <i id="toggleRegionsIcon" class="fa-solid fa-chevron-down text-slate-500"></i>
+              <span id="toggleRegionsText">Показать все районы</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Always visible quick cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition" data-aos="fade-up">
+            <div class="flex items-start gap-3">
+              <div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <div class="font-black text-slate-900">Эвакуатор Есиль 24/7</div>
+                <div class="text-sm text-slate-500 mt-1">WhatsApp</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="50">
+            <div class="flex items-start gap-3">
+              <div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <div class="font-black text-slate-900">Эвакуатор Алматы район 24/7</div>
+                <div class="text-sm text-slate-500 mt-1">WhatsApp</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-start gap-3">
+              <div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <div class="font-black text-slate-900">Эвакуатор Сарыарка 24/7</div>
+                <div class="text-sm text-slate-500 mt-1">WhatsApp</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Full list (toggle) -->
+        <div id="regionsAll" class="regions-hidden mt-6">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Все 6 районов Астаны -->
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Есиль 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Алматы район 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Сарыарка 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Байконыр 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Нура 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Сарайшык 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+
+            <!-- Микрорайоны и ЖК -->
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Левый берег 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Правый берег 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Юго-Восток 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Highvill 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Northern Lights 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Изумрудный квартал 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Триумф Астаны 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Grand Alatau 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Nova City 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Expo 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Керемет 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Караоткель 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Коктал 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Молодёжный 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Чубары 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Мичурино 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Куйгенжар 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Промзона 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Интернациональный 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Тельмана 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Юбилейный 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Шубар 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Ильинка 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Тассуат 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Уркер 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div><div><div class="font-black text-slate-900">Эвакуатор Лесозавод 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+
+            <!-- Пригороды и трассы -->
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Косшы 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Талапкер 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Кояндинский 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Софиевка 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Аршалы 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Жибек Жолы 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Целиноград 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Шортанды 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Кокшетау (трасса) 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Караганды (трасса) 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+            <a href="https://wa.me/77770377736" class="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition"><div class="flex items-start gap-3"><div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-road"></i></div><div><div class="font-black text-slate-900">Эвакуатор Боровое (трасса) 24/7</div><div class="text-sm text-slate-500 mt-1">WhatsApp</div></div></div></a>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="tel:+77770377736" class="btn-sos text-white px-7 py-4 rounded-2xl font-black text-lg flex items-center justify-center gap-3 w-full sm:w-auto">
+            <i class="fas fa-phone-alt"></i> +7 777 037 7736
+          </a>
+          <a href="https://wa.me/77770377736" class="bg-white text-green-600 border-2 border-green-500 px-7 py-4 rounded-2xl font-black text-lg flex items-center justify-center gap-3 w-full sm:w-auto hover:bg-green-50 transition">
+            <i class="fab fa-whatsapp text-2xl"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="py-20 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+      <h2 class="text-3xl font-black text-center mb-16">Как мы работаем</h2>
+
+      <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-red-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm" data-aos="fade-right">
+            <h4 class="font-bold text-lg mb-1">1. Звонок / WhatsApp</h4>
+            <p class="text-sm text-slate-500">Уточняем место, тип авто и&nbsp;задачу.</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-red-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm" data-aos="fade-left">
+            <h4 class="font-bold text-lg mb-1">2. Выезд</h4>
+            <p class="text-sm text-slate-500">Выезжаем сразу. Работаем 24/7.</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-red-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm" data-aos="fade-right">
+            <h4 class="font-bold text-lg mb-1">3. Помощь</h4>
+            <p class="text-sm text-slate-500">Погрузка, фиксация и&nbsp;доставка по&nbsp;адресу.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="tel:+77770377736" class="btn-sos text-white px-7 py-4 rounded-2xl font-black text-lg flex items-center justify-center gap-3 w-full sm:w-auto">
+          <i class="fas fa-phone-alt"></i> Позвонить
+        </a>
+        <a href="https://wa.me/77770377736" class="bg-white text-green-600 border-2 border-green-500 px-7 py-4 rounded-2xl font-black text-lg flex items-center justify-center gap-3 w-full sm:w-auto hover:bg-green-50 transition">
+          <i class="fab fa-whatsapp text-2xl"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white py-12 text-center rounded-t-[50px]">
+    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-6">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+    <h2 class="font-bold text-2xl mb-2">Эвакуатор №1 в Астане</h2>
+    <p class="text-slate-400 text-sm mb-6">Эвакуатор 24/7 · astanaevak.kz</p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="tel:+77770377736" class="bg-white text-slate-900 px-6 py-3 rounded-2xl font-black inline-flex items-center gap-2 hover:bg-slate-100 transition">
+        <i class="fas fa-phone-alt text-red-500"></i> +7 777 037 7736
+      </a>
+      <a href="https://wa.me/77770377736" class="bg-green-500 text-white px-6 py-3 rounded-2xl font-black inline-flex items-center gap-2 hover:brightness-110 transition">
+        <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+      </a>
+    </div>
+
+    <div class="mt-6 text-xs text-slate-500">
+      Разработчик сайта —
+      <a href="https://wa.me/77074534518"
+         class="font-bold text-white hover:text-red-400 transition"
+         target="_blank" rel="noopener">
+        Anuken
+      </a>
+    </div>
+
+    <p class="text-slate-600 text-xs mt-6">© 2026 Все права защищены.</p>
+  </footer>
+
+  <!-- MOBILE BOTTOM BAR -->
+  <div class="fixed bottom-6 left-4 right-4 z-50 md:hidden">
+    <div class="bg-slate-900/90 backdrop-blur-md p-2 rounded-[20px] shadow-2xl border border-white/10 flex gap-2">
+      <a href="tel:+77770377736" class="flex-1 bg-white text-slate-900 rounded-xl flex items-center justify-center py-4 font-black text-lg active:scale-95 transition">
+        <i class="fas fa-phone mr-2 text-red-500"></i> ПОЗВОНИТЬ
+      </a>
+      <a href="https://wa.me/77770377736" class="w-16 bg-green-500 text-white rounded-xl flex items-center justify-center text-2xl active:scale-95 transition">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+
+    /* ===== THEME SWITCH (day default, night option) ===== */
+    const themeBtn = document.getElementById('themeBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    function applyTheme(mode){
+      if (mode === 'night'){
+        document.documentElement.setAttribute('data-theme','night');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeLabel.textContent = 'День';
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeLabel.textContent = 'Ночь';
+      }
+    }
+    // Day is default (no localStorage fallback to system preference)
+    const savedTheme = localStorage.getItem('aevk-theme');
+    if (savedTheme === 'night') applyTheme('night'); else applyTheme('day');
+
+    themeBtn && themeBtn.addEventListener('click', () => {
+      const isNight = document.documentElement.getAttribute('data-theme') === 'night';
+      const next = isNight ? 'day' : 'night';
+      localStorage.setItem('aevk-theme', next);
+      applyTheme(next);
+    });
+
+    /* ===== Hero image rotation ===== */
+    (function rotateHeroImage(){
+      const heroEl = document.getElementById('heroImage');
+      if (!heroEl) return;
+      const images = Array.from({ length: 8 }, (_, i) => `images/img${i + 1}.jpg`);
+      const key = 'astanaevakHeroIdx';
+      let last = Number(localStorage.getItem(key));
+      if (!Number.isFinite(last)) last = -1;
+      const next = (last + 1) % images.length;
+      localStorage.setItem(key, String(next));
+      const nextSrc = images[next];
+      const pre = new Image();
+      pre.onload = () => {
+        heroEl.style.opacity = '0';
+        setTimeout(() => {
+          heroEl.src = nextSrc;
+          requestAnimationFrame(() => { heroEl.style.opacity = '1'; });
+        }, 140);
+      };
+      pre.onerror = () => {};
+      pre.src = nextSrc;
+      heroEl.style.opacity = '1';
+    })();
+
+    /* ===== Burger ===== */
+    const burgerBtn = document.getElementById('burgerBtn');
+    const burgerIcon = document.getElementById('burgerIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function closeMenu() {
+      mobileMenu.classList.remove('menu-expanded');
+      mobileMenu.classList.add('menu-collapsed');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+      burgerIcon.classList.remove('fa-xmark');
+      burgerIcon.classList.add('fa-bars');
+    }
+    function openMenu() {
+      mobileMenu.classList.remove('menu-collapsed');
+      mobileMenu.classList.add('menu-expanded');
+      burgerBtn.setAttribute('aria-expanded', 'true');
+      burgerIcon.classList.remove('fa-bars');
+      burgerIcon.classList.add('fa-xmark');
+    }
+    burgerBtn && burgerBtn.addEventListener('click', () => {
+      const isOpen = burgerBtn.getAttribute('aria-expanded') === 'true';
+      if (isOpen) closeMenu(); else openMenu();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+    document.addEventListener('click', (e) => {
+      const isOpen = burgerBtn && burgerBtn.getAttribute('aria-expanded') === 'true';
+      if (!isOpen) return;
+      if (mobileMenu.contains(e.target) || burgerBtn.contains(e.target)) return;
+      closeMenu();
+    });
+
+    /* ===== Regions toggle ===== */
+    const toggleRegionsBtn = document.getElementById('toggleRegionsBtn');
+    const regionsAll = document.getElementById('regionsAll');
+    const toggleRegionsText = document.getElementById('toggleRegionsText');
+    const toggleRegionsIcon = document.getElementById('toggleRegionsIcon');
+
+    if (toggleRegionsBtn && regionsAll) {
+      toggleRegionsBtn.addEventListener('click', () => {
+        const hidden = regionsAll.classList.contains('regions-hidden');
+        if (hidden) {
+          regionsAll.classList.remove('regions-hidden');
+          toggleRegionsText.textContent = 'Скрыть все районы';
+          toggleRegionsIcon.classList.remove('fa-chevron-down');
+          toggleRegionsIcon.classList.add('fa-chevron-up');
+        } else {
+          regionsAll.classList.add('regions-hidden');
+          toggleRegionsText.textContent = 'Показать все районы';
+          toggleRegionsIcon.classList.remove('fa-chevron-up');
+          toggleRegionsIcon.classList.add('fa-chevron-down');
+          document.getElementById('regions')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
